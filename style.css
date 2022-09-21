@@ -38,6 +38,7 @@ body {
   opacity: 0.15;
 } */
 
+/* ---------------------- This is Navbar ---------------------*/
 
 nav {
   width: 80%;
@@ -84,6 +85,8 @@ nav {
   background: var(--white);
 }
 
+/* ---------------------- This is Homepage ---------------------*/
+
 .grid-container {
   width: 80%;
   margin-left: auto;
@@ -115,8 +118,8 @@ nav {
 .left-Text {
   letter-spacing: 1.25px;
   font-weight: 400;
-  margin-top: -10%;
-  margin-bottom: 10%;
+  margin-top: -20px;
+  margin-bottom: 40px;
 }
 
 .emp {
@@ -153,18 +156,26 @@ nav {
   padding-left: 15px;
   padding-bottom: 10px;
   padding-right: 70px;
-  margin-left: 15%;
+  /* margin-left: 15%; */
 }
+
+/* ---------------------- This is Homepage Image ---------------------*/
 
 .frame {
   justify-self: start;
-  max-width: 300px;
   padding-left: 5%;
+}
+
+.frame img {
+  width: 425px;
+  height: 425px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .face {
   min-width: 300px;
-  padding: 2%;
+  padding: 5px;
   border: 3px solid var(--accent);
 }
 
@@ -180,7 +191,7 @@ nav {
 }
 
 .p-tag {
-  margin-top: 5%;
+  margin-top: 50px;
   margin-bottom: 30px;
   color: var(--blue1);
   font-family: var(--font2);
@@ -201,26 +212,31 @@ nav {
 
 .frame-AW {
   justify-self: end;
-  max-width: 300px;
-  max-height: 300px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   overflow: hidden;
+  transition: 0.3s ease;
+  margin-right: 15px;
+}
+
+.frame-AW .imageBehind img {
+  max-width: 325px;
+  max-height: 325px;
+  /* border-radius: 50%; */
   padding: 5px;
   border: 3px solid var(--accent);
-  transition: 0.3s ease;
-  margin-right: 10px;
+  object-fit: cover;
 }
 
 .frame-AW:hover {
-  opacity: 100%;
   /* margin-top: -15px; */
   transition: 0.3s ease;
 }
 
 .fr-text {
   position: absolute;
-  width: 95%;
-  height: 35%;
+  width: 100%;
+  height: 35.5%;
+  /* height: 32%; */
   margin-top: -40%;
   padding-top: 10px;
   padding-left: 15px;
@@ -248,13 +264,13 @@ nav {
 .side-bar {
   position: fixed;
   top: 25%;
-  left: 5%;
-  /* background: var(--blue1); */
+  left: 3%;
   padding: 200px 20px 200px 0px;
   border-right: 1px solid var(--blue1);
   display: flex;
   flex-direction: column;
   text-align: right;
+  justify-content: start;
 }
 
 .side-bar a {
@@ -263,11 +279,13 @@ nav {
   font-family: var(--font1);
   font-size: 100%;
   font-weight: 600;
-  padding-top: 30px;
-  margin-bottom: 30px;
+  padding: 15px 10px 15px 10px;
+  margin: 5px 0 5px 0;
+  /* background: var(--blue1); */
 }
 
 .top-button {
+  /* float: right; */
   position: fixed;
   bottom: 5%;
   right: 5%;
@@ -306,11 +324,30 @@ nav {
     justify-self: center;
   }
 
-
+  .side-bar {
+    left: 1%;
+  }
 }
 
 
 @media screen and (width <=1050px) {
+  .grid-container {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: none;
+  }
+
+  .grid-container .intro {
+    grid-row: 2;
+    justify-self: center;
+    padding: 0;
+  }
+
+  .grid-container .frame {
+    grid-row: 1;
+    justify-self: center;
+    padding: 0;
+  }
+
   .p-AW {
     margin-left: auto;
     margin-right: auto;
@@ -331,13 +368,9 @@ nav {
     left: 10%;
   }
 
-  .top-button {
-    right: 10%;
-  }
-
 }
 
-@media screen and (width <=700px) {
+@media screen and (width <=650px) {
   .p-AW {
     margin-left: 20%
   }
