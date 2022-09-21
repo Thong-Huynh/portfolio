@@ -1,14 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 :root {
-  --blue1: rgb(29, 51, 84);
+  --blue1: rgb(36, 58, 90);
   --blue2: rgb(70, 117, 153);
   --white: rgb(255, 255, 255);
   --accent: rgb(180, 139, 109);
   --darkmode: rgb(26, 26, 26);
   --font1: 'Open Sans', sans-serif;
-  --font2: 'Trirong', serif;
+  --font2: 'EB Garamond', serif;
+}
+
+/* Trirong */
+/* EB Garamond */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -37,7 +45,7 @@ nav {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-family: var(--font1);
   font-weight: 600;
@@ -119,7 +127,7 @@ nav {
 
 .button-holder {
   background: var(--blue1);
-  width: 52%;
+  width: 55%;
   height: 30%;
   margin-left: -8%;
   padding-left: 5%;
@@ -128,17 +136,23 @@ nav {
 
 .button {
   color: var(--accent);
+  text-decoration: none;
   font-family: var(--font2);
-  font-weight: 500;
+  font-weight: 900;
   font-size: 175%;
-  letter-spacing: 2px;
-  padding: 10px;
+  letter-spacing: 1.25px;
+  border-bottom: 2px solid var(--accent);
+  padding-top: 10px;
+  margin-left: 10px;
   transition: 0.3s ease-in-out;
 }
 
 .button-holder :hover {
   color: var(--white);
   background: var(--accent);
+  padding-left: 15px;
+  padding-bottom: 10px;
+  padding-right: 70px;
   margin-left: 15%;
 }
 
@@ -158,44 +172,48 @@ nav {
 
 
 .p-AW {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 70%;
+  /* max-width: 1000px; */
+  margin-left: 15%;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
 }
 
 .p-tag {
   margin-top: 5%;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   color: var(--blue1);
   font-family: var(--font2);
   font-size: 300%;
   font-weight: 800;
-  text-align: center;
+  text-align: left;
 }
 
 .grid-container-artwork {
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  /* display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
 }
 
 .frame-AW {
-  width: 300px;
+  justify-self: end;
+  max-width: 300px;
   max-height: 300px;
-  justify-self: center;
   margin-bottom: 30px;
   overflow: hidden;
   padding: 5px;
   border: 3px solid var(--accent);
   transition: 0.3s ease;
-  margin-left: 10px;
   margin-right: 10px;
 }
 
 .frame-AW:hover {
   opacity: 100%;
-  margin-top: -15px;
+  /* margin-top: -15px; */
   transition: 0.3s ease;
 }
 
@@ -225,4 +243,113 @@ nav {
   background: var(--blue1);
   transition: 0.3s ease;
   opacity: 100%;
+}
+
+.side-bar {
+  position: fixed;
+  top: 25%;
+  left: 5%;
+  /* background: var(--blue1); */
+  padding: 200px 20px 200px 0px;
+  border-right: 1px solid var(--blue1);
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.side-bar a {
+  text-decoration: none;
+  color: var(--accent);
+  font-family: var(--font1);
+  font-size: 100%;
+  font-weight: 600;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+.top-button {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+
+.top-button a {
+  text-decoration: none;
+  color: var(--blue1);
+  background: var(--accent);
+  font-family: var(--font1);
+  font-size: 100%;
+  font-weight: 600;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+
+@media screen and (width <=1400px) {
+  .p-AW {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .p-tag {
+    text-align: center;
+  }
+
+  .grid-container-artwork {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .frame-AW {
+    justify-self: center;
+  }
+
+
+}
+
+
+@media screen and (width <=1050px) {
+  .p-AW {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .p-tag {
+    text-align: center;
+  }
+
+  .grid-container-artwork {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: none;
+    justify-content: center;
+  }
+
+  .side-bar {
+    left: 10%;
+  }
+
+  .top-button {
+    right: 10%;
+  }
+
+}
+
+@media screen and (width <=700px) {
+  .p-AW {
+    margin-left: 20%
+  }
+
+  .grid-container-artwork {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: none;
+    justify-content: center;
+  }
+
+  .side-bar {
+    left: 2%;
+  }
 }
