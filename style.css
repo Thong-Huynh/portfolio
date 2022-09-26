@@ -179,7 +179,7 @@ nav {
   border: 3px solid var(--accent);
 }
 
-/* ---------------------- This is gallery ---------------------*/
+/* ---------------------- This is Gallery ---------------------*/
 
 
 .p-AW {
@@ -205,6 +205,9 @@ nav {
   margin-right: auto; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
   /* display: flex;
   flex-direction: row;
   /* justify-content: space-around; */
@@ -212,23 +215,25 @@ nav {
 
 .frame-AW {
   justify-self: end;
-  margin-bottom: 40px;
   overflow: hidden;
   transition: 0.3s ease;
-  margin-right: 15px;
+  /* background: green; */
 }
 
 .frame-AW .imageBehind img {
-  max-width: 300px;
-  max-height: 300px;
+  width: 300px;
+  height: 300px;
   /* border-radius: 50%; */
   padding: 5px;
   border: 3px solid var(--accent);
   object-fit: cover;
+  filter: grayscale(0);
+  transition: 0.3s ease;
+
 }
 
-.frame-AW:hover {
-  /* margin-top: -15px; */
+.imageBehind:hover img {
+  filter: grayscale(1);
   transition: 0.3s ease;
 }
 
@@ -236,17 +241,20 @@ nav {
   position: absolute;
   width: 100%;
   height: 35.5%;
-  /* height: 32%; */
   margin-top: -40%;
   padding-top: 10px;
   padding-left: 15px;
   font-family: var(--font1);
   font-size: 150%;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 1px;
-  color: var(--white);
+  color: var(--blue1);
   transition: 0.3s ease;
   opacity: 0%;
+}
+
+.fr-text b {
+  font-weight: 900;
 }
 
 .fr-text span {
@@ -256,10 +264,13 @@ nav {
 }
 
 .imageBehind:hover .fr-text {
-  background: var(--blue1);
+  background: var(--accent);
   transition: 0.3s ease;
   opacity: 100%;
 }
+
+
+/* ---------------------- This is Side-bar ---------------------*/
 
 .side-bar {
   position: fixed;
@@ -302,6 +313,8 @@ nav {
   margin-bottom: 30px;
   padding: 10px;
 }
+
+/* ---------------------- This is Responsive Media ---------------------*/
 
 
 @media screen and (width <=1400px) {
