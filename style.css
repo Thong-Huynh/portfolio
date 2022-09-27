@@ -1,19 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 :root {
   --blue1: rgb(36, 58, 90);
-  --blue2: rgb(70, 117, 153);
-  --white: rgb(255, 255, 255);
+  --blue2: rgb(51, 115, 163);
   --accent: rgb(180, 139, 109);
-  --darkmode: rgb(26, 26, 26);
+  --white: rgb(255, 255, 255);
+  --dark: rgb(26, 26, 26);
   --font1: 'Open Sans', sans-serif;
   --font2: 'EB Garamond', serif;
 }
-
-/* Trirong */
-/* EB Garamond */
 
 html {
   scroll-behavior: smooth;
@@ -22,12 +17,12 @@ html {
 body {
   margin: 0;
   background: var(--white);
-  /* background: var(--darkmode); */
+  /* background: var(--dark); */
 }
 
 /* body::before {
   content: "";
-  background: url(assets/bee\ \(compressed\).jpeg) no-repeat;
+  background: url(assets/bee.jpeg) no-repeat;
   background-size: 100%;
   position: absolute;
   z-index: -1;
@@ -41,7 +36,7 @@ body {
 /* ---------------------- This is Navbar ---------------------*/
 
 nav {
-  width: 80%;
+  width: 100%;
   top: 0;
   margin-left: auto;
   margin-right: auto;
@@ -50,33 +45,35 @@ nav {
   align-items: center;
   font-family: var(--font1);
   font-weight: 600;
-  border-bottom: 1px solid var(--blue1);
+  /* border-bottom: 1px solid var(--blue1); */
 }
 
 .logo {
   color: var(--blue1);
-  font-size: 125%;
+  font-size: 150%;
   font-weight: 900;
+  padding-left: 10%;
 }
 
 .navbar {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  width: 400px;
   color: var(--accent);
-  padding: 0;
+  padding-right: 10%;
 }
 
 .navbar a {
   color: var(--accent);
-  padding: 10px;
+  padding: 10px 15px;
+  margin: 0 5px;
   text-decoration: none;
   transition: 0.3s ease-in-out;
 }
 
 .navbar li :hover {
   background: var(--blue1);
+  color: var(--white);
 }
 
 .navbar li .active {
@@ -93,6 +90,7 @@ nav {
   margin-right: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 50px;
   margin-top: 15vh;
 }
 
@@ -100,8 +98,7 @@ nav {
   color: var(--blue1);
   font-family: var(--font1);
   font-size: 100%;
-  margin-top: -5%;
-  padding-right: 5%;
+  margin-top: -50px;
   text-align: left;
   justify-self: end;
   /* overflow: hidden; */
@@ -109,23 +106,36 @@ nav {
 
 .greet {
   font-family: var(--font1);
-  font-size: 320%;
+  font-size: 400%;
   font-weight: 800;
   text-align: right;
   text-transform: lowercase;
 }
 
+.greet span {
+  text-transform: capitalize;
+}
+
 .left-Text {
+  color: var(--accent);
+  text-align: right;
   letter-spacing: 1.25px;
-  font-weight: 400;
-  margin-top: -20px;
-  margin-bottom: 40px;
+  line-height: 2rem;
+  font-size: 115%;
+  font-weight: 600;
+  margin-top: -10px;
+  margin-bottom: 50px;
 }
 
 .emp {
   font-weight: 700;
-  font-size: 125%;
-  color: var(--accent);
+  font-size: 120%;
+  color: var(--blue1);
+}
+
+.CTA {
+  font-size: 110%;
+  font-weight: 400;
 }
 
 .button-holder {
@@ -140,12 +150,13 @@ nav {
 .button {
   color: var(--accent);
   text-decoration: none;
-  font-family: var(--font2);
   font-weight: 900;
   font-size: 175%;
   letter-spacing: 1.25px;
-  border-bottom: 2px solid var(--accent);
-  padding-top: 10px;
+  border-left: 3px solid var(--accent);
+  padding-left: 15px;
+  padding-top: 13px;
+  padding-bottom: 50px;
   margin-left: 10px;
   transition: 0.3s ease-in-out;
 }
@@ -163,12 +174,11 @@ nav {
 
 .frame {
   justify-self: start;
-  padding-left: 5%;
 }
 
 .frame img {
-  width: 425px;
-  height: 425px;
+  width: 35vh;
+  height: 35vh;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -185,7 +195,7 @@ nav {
   width: 80%;
   margin: auto;
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 185px 1fr;
   grid-column-gap: 50px;
   align-items: start;
 }
@@ -198,10 +208,15 @@ nav {
   margin-top: 50px;
   margin-bottom: 30px;
   color: var(--blue1);
-  font-family: var(--font2);
-  font-size: 500%;
+  font-family: var(--font1);
+  font-size: 350%;
   font-weight: 800;
   text-align: left;
+}
+
+.num {
+  color: var(--white);
+  -webkit-text-stroke: 2px var(--accent);
 }
 
 .grid-container-artwork {
@@ -240,6 +255,7 @@ nav {
 .frame-AW .imageBehind iframe {
   width: 300px;
   height: 300px;
+  /* border-radius: 50%; */
   padding: 5px;
   border: 3px solid var(--accent);
   filter: grayscale(0);
@@ -294,24 +310,32 @@ nav {
 .side-bar {
   grid-column: 1;
   position: sticky;
-  top: 30vh;
-  /* background: var(--blue2); */
-  padding: 200px 20px 200px 0px;
-  border-right: 1px solid var(--blue1);
+  top: 0vw;
+  background: var(--blue1);
+  padding: 100px 0px 45px 0px;
   display: flex;
   flex-direction: column;
-  text-align: right;
+  text-align: left;
   justify-content: start;
 }
 
 .side-bar a {
   text-decoration: none;
   color: var(--accent);
+  border-bottom: 3px solid var(--accent);
   font-family: var(--font1);
-  font-size: 100%;
+  font-size: 120%;
   font-weight: 600;
-  padding: 15px 10px 15px 10px;
-  margin: 5px 0 5px 0;
+  padding: 10px 0;
+  margin: 0px 0px 0px 40px;
+  transition: 0.3s ease;
+}
+
+.side-bar a:hover {
+  color: var(--white);
+  background: var(--accent);
+  padding-left: 15px;
+  transition: 0.3s ease;
 }
 
 /* ---------------------- This is TOP button ---------------------*/
@@ -331,8 +355,7 @@ nav {
   font-size: 110%;
   font-weight: 600;
   margin-bottom: 30px;
-  padding: 10px;
-  /* padding-top: 30px; */
+  padding: 10px 0 10px 15px;
   padding-right: 4vw;
   transition: 0.3s ease;
 }
@@ -351,16 +374,11 @@ nav {
     margin-right: auto;
   }
 
-  .p-tag {
-    margin-top: 80px;
-    font-size: 400%;
-    text-align: center;
-  }
-
   .grid-container-artwork {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 80px;
   }
 
   .frame-AW {
@@ -397,6 +415,11 @@ nav {
     display: flex;
     flex-direction: column;
   }
+
+  .p-tag {
+    text-align: center;
+  }
+
 
   .side-bar {
     flex-direction: row;
@@ -438,7 +461,7 @@ nav {
 
 }
 
-@media screen and (width <=850px) {
+@media screen and (width <=800px) {
   .grid-container-artwork {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
